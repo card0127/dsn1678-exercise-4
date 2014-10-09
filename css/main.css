@@ -13,3 +13,114 @@ img {
 section {
 	padding: 10rem 0;
 }
+
+.sun {
+	width: 300px;
+}
+
+.sun-section {
+	background: transparent url("../img/mars-pano.jpg") no-repeat center top;
+	background-size: cover;
+}
+
+.dipper {
+	width: 300px;
+	opacity: 0;
+}
+
+.js-dipper-fade {
+	/* Don't forget to put in all the prefixes!!! */
+	-webkit-animation: dipper-fade 1s linear forwards;	
+}
+
+.shuttle-section {
+	background: rgba(254,166,2,1.00);
+	background-size: cover;
+}
+
+.shuttle {
+	width: 300px;
+	opacity: 0;
+	position: relative;
+	top: 6em;
+}
+
+.js-shuttle-fade {
+	/* Don't forget to put in all the prefixes!!! */
+	-webkit-animation: shuttle-fade 1s linear forwards;	
+}
+
+.ship-section {
+	background: transparent url("../img/kasei-valles-canyons.jpg") no-repeat center top;
+	background-size: cover; /* Cover will make as the background ocupies the whole section. */
+	text-align: center; /* This will align the ships to the centre of the page. */
+}
+
+.ship1 {
+	width: 100px;
+	opacity: 0;
+	position: relative;
+	top: 6em; /* Inicial position of the ships when opacity is at zero. */
+	display: inline-block;
+}
+
+.ship2 {
+	width: 100px;
+	opacity: 0;
+	position: relative;
+	top: 8em; /* Inicial position of the ships when opacity is at zero. */
+	display: inline-block; /* This will make that the items will show side by side. */
+}
+
+.js-ship1-fade { /* This class makes that the javascript will triger the items instead of loading automaticaly when the page is loaded. */
+	/* Don't forget to put in all the prefixes!!! */
+	-webkit-animation: ship1-fade 1s linear forwards;	
+}
+
+.js-ship2-fade {
+	/* Don't forget to put in all the prefixes!!! */
+	-webkit-animation: ship2-fade 1s linear forwards;	
+}
+/* Don't forget to put in all the prefixes!!! */
+	
+@-webkit-keyframes dipper-fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes shuttle-fade {
+	0% {
+		opacity: 0;
+		top: 6em;
+	}
+	100% {
+		opacity: 1;
+		top: 0em;
+	}
+}
+
+@-webkit-keyframes ship1-fade {
+	0% {
+		opacity: 0;
+		top: 6em;
+	}
+	100% {
+		opacity: 1;
+		top: 0em;
+	}
+}
+
+@-webkit-keyframes ship2-fade {
+	0% {
+		opacity: 0;
+		top: 8em;
+	}
+	100% {
+		opacity: 1;
+		top: 0em;
+	}
+}
